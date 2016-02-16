@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainGameClass" >
+
+    <ImageView
+        android:id="@+id/sky"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@string/sky"
+        android:src="@drawable/game_background" />
+
+    <ImageView
+        android:id="@+id/food1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/food1"
+        android:scaleType="fitCenter"
+        android:src="@drawable/pboiledsausage"
+        android:layout_above="@+id/food2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:clickable="true"
+        android:nestedScrollingEnabled="true" />
+
+
+    <ImageView
+        android:id="@+id/food2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/food2"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tomato"
+        android:layout_marginLeft="37dp"
+        android:layout_marginStart="37dp"
+        android:layout_below="@+id/food3"
+        android:layout_toRightOf="@+id/food1"
+        android:layout_toEndOf="@+id/food1"/>
+
+
+    <ImageView
+        android:id="@+id/food3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/food3"
+        android:scaleType="fitCenter"
+        android:src="@drawable/pshark"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/food2"
+        android:layout_toEndOf="@+id/food2"/>
+
+
+    <ImageView
+        android:id="@+id/food4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@string/food4"
+        android:scaleType="fitCenter"
+        android:src="@drawable/beans"
+        android:layout_marginRight="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_below="@+id/food3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>
+

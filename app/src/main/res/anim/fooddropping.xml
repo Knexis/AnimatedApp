@@ -1,0 +1,35 @@
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shareInterpolator="false"
+    android:duration="5000"
+    android:fillAfter="true"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator" >
+
+
+    <scale
+        android:fromXScale="1.0"
+        android:toXScale="1.0"
+        android:fromYScale="1.0"
+        android:toYScale="1.0"
+        android:pivotX="500%"
+        android:pivotY="500%" />
+    <!--above code expands food1 size as it rises-->
+
+    <translate
+        android:fromYDelta="0%p"
+        android:toYDelta="100%p"
+        />
+    <!-- moves from lower part of y-axis to top part of y-axis-->
+
+
+    <alpha
+        android:fromAlpha="3.3"
+        android:toAlpha="0.0"
+        />
+    <!-- controls opacity from transparent to deeper shade-->
+
+
+
+</set>
+
+<!--animation code for food1 to rise-->
+
