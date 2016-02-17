@@ -22,7 +22,7 @@ import java.util.TimerTask;
 import java.util.logging.Handler;
 
 
-public class MainGameClass extends AppCompatActivity {
+public class MainGameClass extends BaseActivity {
 
 
     ImageView food1;
@@ -39,48 +39,39 @@ public class MainGameClass extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        mplay();
+        //mplay();
         setContentView(R.layout.appbackgroung);
 
         playFood.add((ImageView) findViewById(R.id.food1));
         playFood.add((ImageView) findViewById(R.id.food2));
         playFood.add((ImageView) findViewById(R.id.food3));
         playFood.add((ImageView) findViewById(R.id.food4));
-        playFood.get(0).setOnClickListener(new View.OnClickListener() {
+
+
+
+        findViewById(R.id.food1).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
+
+                finish();
+
             }
         });
 
         startTimer();
 
-        playFood.get(0).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                clickfoodmissing();
-            }
-        });
 
     }//bundle
 
 
 
-    protected void mplay() {
+
+
+    @Override
+    protected void onResume() {
         super.onResume();
-        MediaPlayer mPlayer = MediaPlayer.create(MainGameClass.this, R.raw.song1);
-        try {
-            mPlayer.prepare();
-        } catch (IllegalStateException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        mPlayer.start();
+        playInGameSong();
     }
-
-
 
     private void startTimer() {
         new CountDownTimer(60000, 5000) {
