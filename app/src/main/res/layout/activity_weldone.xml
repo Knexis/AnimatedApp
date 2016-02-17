@@ -11,50 +11,35 @@
         android:contentDescription="@string/sky"
         android:src="@drawable/game_background" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@drawable/end"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:contentDescription="@string/levelcompletedialogue" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/levelcomplete"
-        android:id="@+id/textView"
-        android:background="#4d5c6e"
-        android:textColor="#eef8d9"
-        android:textSize="20sp"
-        android:layout_alignBottom="@+id/imageView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="80dp" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/quitgamebutton"
-        android:id="@+id/button"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="26dp"
-        android:onClick="endgame"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
         android:text="@string/replaybutton"
         android:id="@+id/button2"
-        android:layout_alignTop="@+id/button"
+        android:onClick="replaygame"
+        android:layout_alignTop="@+id/imageButton"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:onClick="replaygame"/>
+        android:layout_marginRight="28dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/fdunkno"
+        android:textColor="#ffffff"
+        android:width="20dp" />
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/imageButton"
+        android:background="@drawable/aquitbuttonhover"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="24dp"
+        android:onClick="endgame"/>
+
 
 
 </RelativeLayout>

@@ -15,18 +15,14 @@ import java.io.IOException;
  * Note:
  */
 public class BaseActivity extends AppCompatActivity {
-
     private static MediaPlayer mPlayer;// so that all the classes have access to the same player
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         if(mPlayer == null) {
-
             mPlayer = MediaPlayer.create(this, R.raw.startsong);
-
         }
 
 
@@ -50,6 +46,20 @@ public class BaseActivity extends AppCompatActivity {
         mPlayer = MediaPlayer.create(this, R.raw.song1);
         mPlayer.start();
     }
+
+
+
+//    public void missingonclick(){
+//        findViewById(R.id.food1).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
+//    }
+
+
+
 
 
     @Override

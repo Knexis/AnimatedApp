@@ -9,11 +9,12 @@
     <string name="sky">Sky</string>
     <string name="clock">Clock</string>
     <string name="hour">Hour Hand</string>
-    <string name="title_activity_welcomescreen">welcomescreen</string>
-    <string name="title_activity_weldone">weldone</string>
+    <string name="title_activity_welcomescreen">Healthy Lyf Cho</string>
+    <string name="title_activity_weldone">Level Complete</string>
     <string name="title_activity_invisibleonclick">invisibleonclick</string>
     <string name="replaybutton">Replay</string>
     <string name="quitgamebutton">Quit</string>
     <string name="levelcomplete">Level Complete</string>
     <string name="levelcompletedialogue">completedleveldialog</string>
+    <string name="menu">Goto menu</string>
 </resources>

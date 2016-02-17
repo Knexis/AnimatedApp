@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".welcomescreen" >
+    tools:context=".startscreen" >
 
     <ImageView
         android:id="@+id/sky"
@@ -16,23 +16,20 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
         android:src="@drawable/welcome"
+        android:layout_marginTop="40dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="146dp"
-         android:onClick="soundandgame"/>
+        android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Click the image to continue"
-        android:id="@+id/textView"
-        android:background="#52075b"
-        android:textColor="#ffffff"
-        android:textSize="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageButton2"
+        android:layout_marginTop="62dp"
+        android:background="@drawable/astart"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:onClick="soundandgame"/>
 
 
 </RelativeLayout>

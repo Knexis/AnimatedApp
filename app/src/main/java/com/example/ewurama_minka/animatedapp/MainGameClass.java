@@ -1,25 +1,17 @@
 package com.example.ewurama_minka.animatedapp;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.v7.app.AppCompatActivity;
-import android.view.MotionEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.logging.Handler;
 
 
 public class MainGameClass extends BaseActivity {
@@ -47,22 +39,10 @@ public class MainGameClass extends BaseActivity {
         playFood.add((ImageView) findViewById(R.id.food3));
         playFood.add((ImageView) findViewById(R.id.food4));
 
-
-
-        findViewById(R.id.food1).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                finish();
-
-            }
-        });
-
         startTimer();
 
 
     }//bundle
-
 
 
 
@@ -73,12 +53,14 @@ public class MainGameClass extends BaseActivity {
         playInGameSong();
     }
 
+
     private void startTimer() {
         new CountDownTimer(60000, 5000) {
             public void onTick(long millisUntilFinished) {
                 //mTextField.setText("seconds remaining: " + millisUntilFinished / 1000);
                 pullRandomFoods();
             }
+
             public void onFinish() {
                 //mTextField.setText("done!");
                 startActivity(new Intent(MainGameClass.this, weldone.class));
@@ -87,20 +69,6 @@ public class MainGameClass extends BaseActivity {
 //        end game after timer hits 60seconds
 //        startActivity(new Intent(MainGameClass.this, weldone.class));
 
-    }
-
-
-
-    public void clickfoodmissing() {
-        ArrayList<Integer> newFoods = BossuFoodBusket.hitusWiththeFood();
-        for (int i = 0; i < playFood.size(); i++) {
-            playFood.get(i).setImageResource(newFoods.get(i));
-        }
-        Animation missing = AnimationUtils.loadAnimation(this, R.anim.foodmissing);
-        playFood.get(0).startAnimation(missing);
-        playFood.get(1).startAnimation(missing);
-        playFood.get(2).startAnimation(missing);
-        playFood.get(3).startAnimation(missing);
     }
 
 
@@ -116,6 +84,31 @@ public class MainGameClass extends BaseActivity {
         playFood.get(3).startAnimation(sunRise);
 
 
+    }
+
+    public void gotomenu() {
+
+        startActivity(new Intent(MainGameClass.this, weldone.class));
+    }
+
+
+    public void missingonclick(View view) {
+        findViewById(R.id.menubutton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotomenu();
+            }
+        });
+    }
+
+
+    public void food1click(View view) {
+        findViewById(R.id.food1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                view.setVisibility(View.INVISIBLE);
+            }
+        });
     }
 
 
@@ -156,4 +149,6 @@ public class MainGameClass extends BaseActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }
